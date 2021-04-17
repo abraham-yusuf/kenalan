@@ -1,0 +1,105 @@
+html, body {
+    height: 100%;
+    background-color: black;
+    font-size: 16pt;
+}
+
+.main {
+    height: 100%;
+    width: 100vw;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16pt;
+    color: #00f93e;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+a {
+    color: #00f936;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+svg, img {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  top: 7px;
+  right: -5px;
+  fill: #00f936;
+}
+
+.blinking{
+  animation:blinkingText 1.0s infinite;
+}
+@keyframes blinkingText{
+  0%{     color: #000;    }
+  75%{    color: transparent; }
+}
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #00f936; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16pt;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #00f936; }
+}
+
+.css-typing p {
+  border-right: .15em solid #00f936;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16pt;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.css-typing p:nth-child(1) {
+  width: 27em;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16pt;
+  animation: type 2s steps(40, end);
+  animation-fill-mode: forwards;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid #00f936;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
